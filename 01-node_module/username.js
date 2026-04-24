@@ -1,0 +1,3 @@
+
+
+exports.username = (myuser) => myuser;
