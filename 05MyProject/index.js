@@ -67,7 +67,7 @@ app.post('/api/login', async (req,res)=>{
     }
 
     res.json({message:"Login Success"});
-})
+}) 
 
 
 // get user details 
