@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const myServer = http.createServer((req, res) => {
     let sr = 1;
-    if(req.url==="/favicon.ico") return res.end();
+    if (req.url === "/favicon.ico") return res.end();
     const myLog = `${sr} | ${(new Date()).toLocaleString()}  |   ${req.url} |\n`;
     fs.appendFile("logs.txt", myLog, (err, data) => {
         // res+=1;
@@ -16,12 +16,12 @@ const myServer = http.createServer((req, res) => {
                 break;
             case "/contact":
                 res.end("Contact us");
-                break; 
+                break;
             default:
                 res.end("404 ERROR");
         }
     })
 });
 
-myServer.listen(8000, () => 
+myServer.listen(8000, () =>
     console.log("Server Started !"))
