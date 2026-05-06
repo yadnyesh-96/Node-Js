@@ -6,7 +6,7 @@ const myServer = http.createServer((req, res) => {
     if(req.url==="/favicon.ico") return res.end();
     const myLog = `${sr} | ${(new Date()).toLocaleString()}  |   ${req.url} |\n`;
     fs.appendFile("logs.txt", myLog, (err, data) => {
-        // res+=1; 
+        // res+=1;
         switch (req.url) {
             case "/":
                 res.end("Home Page");
